@@ -1,0 +1,28 @@
+{
+  "Medicine": [
+    {
+      "id": "1",
+      "MName": "painkiller",
+      "MManDate": "2024-08-02",
+      "MExpDate": "2024-09-06",
+      "MQuantity": "150",
+      "Mprice": "20000"
+    },
+    {
+      "id": "2",
+      "MName": "paracitamol",
+      "MManDate": "2024-04-29",
+      "MExpDate": "2024-08-23",
+      "MQuantity": "50",
+      "Mprice": "10000"
+    },
+    {
+      "id": "3",
+      "MName": "novagene",
+      "MManDate": "2024-07-29",
+      "MExpDate": "2024-09-07",
+      "MQuantity": "20",
+      "Mprice": "5000"
+    }
+  ]
+}

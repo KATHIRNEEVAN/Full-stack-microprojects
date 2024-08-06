@@ -1,0 +1,92 @@
+<div id="body1">
+  <div style="width: 100vw; height: 15vh;display: flex;justify-content: center;align-items: center;">
+    <h1 style="display:flex; width:95vw; justify-content: center;align-items: center;background-color: rgb(233, 148, 21);border-radius: 10px;height: 10vh;">
+      Medicine DataBase
+    </h1>
+  </div>
+  <div style="display: flex;flex-direction: row;">
+  <div style="width: 50vw; display: flex;align-items: center;justify-content: center;">
+    <div id="inputdiv">
+      <form #medForm="ngForm">
+          <table>
+              
+              <tr>
+                  <td colspan="2"> <label for="">Id : </label></td>
+                  <td colspan="3"><input type="text" name="medId" #medId="ngModel" ngModel  class="form-control" required></td>
+                  
+              </tr>
+             
+              <tr>
+                  <td colspan="2"><label for="">Medicine : </label></td>
+                  <td colspan="3"><input type="text" name="medName" #medName="ngModel" ngModel  class="form-control" required></td>
+                  
+              </tr>
+              
+              <tr>
+                  <td colspan="2"><label for="">Manufacture-Date : </label></td>
+                  <td colspan="3"><input type="date" name="medManDate" #medManDate="ngModel" ngModel   class="form-control" required></td>
+                  
+              </tr>
+              
+              <tr>
+                  <td colspan="2"><label for="">Expiry-Date : </label></td>
+                  <td colspan="3"><input type="date" name="medExpDate" #medExpDate="ngModel" ngModel  class="form-control" required></td>
+                 
+              </tr>
+              
+              <tr>
+                  <td colspan="2"><label for="">Quantity : </label></td>
+                  <td colspan="3"><input type="text" name="medQuantity" #medQuantity="ngModel" ngModel  class="form-control" required></td>
+                  
+              </tr>
+              
+              <tr>
+                  <td colspan="2"><label for="">Price : </label></td>
+                  <td colspan="3"><input type="text" name="medprice" #medprice="ngModel" ngModel  class="form-control" required></td>
+                 
+              </tr>
+  </table>
+  <div id="buton">
+    <button class="btn btn-success" (click)="insertmed(medForm.value)" type="reset">Add</button>
+    <button class="btn btn-primary" (click)="updateMedicine(medForm.value)" type="reset">Update</button>
+    <button class="btn btn-warning" (click)="findMedicine(medForm.value)" type="reset">Find</button>
+    <button class="btn btn-info" (click)="findAllMedicine()" type="reset">Find All</button>
+    <button class="btn btn-danger" (click)="deleteMedicine(medForm.value)" type="reset">Delete</button>
+  </div>
+  </form>
+  </div>
+  </div>
+  <div  id="inputdiv1">
+    <h1>Medicine Details</h1>
+    <div id="disp">
+      <table>
+          <tr align="center">
+              <th>Id</th>
+              <th>Medicine</th>
+              <th>Manf Date</th>
+              <th>Expiry-Date</th>
+              <th>Quantity</th>
+              <th>Price</th>
+          </tr>
+          <tr *ngFor="let medi of medicinearr">
+            <td *ngIf="flag">{{medi.id}}</td>
+            <td *ngIf="flag">{{medi.MName}}</td>
+            <td *ngIf="flag">{{medi.MManDate}}</td>
+            <td *ngIf="flag">{{medi.MExpDate}}</td>
+            <td *ngIf="flag">{{medi.MQuantity}}</td>
+            <td *ngIf="flag">{{medi.Mprice}}</td>
+          </tr>
+          <tr *ngIf="flag2">
+            <td>{{medicine.id}}</td>
+            <td>{{medicine.MName}}</td>
+            <td>{{medicine.MManDate}}</td>
+            <td>{{medicine.MExpDate}}</td>
+            <td>{{medicine.MQuantity}}</td>
+            <td>{{medicine.Mprice}}</td>
+          </tr>
+      </table>
+      
+  </div>
+  </div>
+  </div>
+  </div>
